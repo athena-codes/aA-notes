@@ -1,0 +1,23 @@
+--Boolean (logical) Operators
+
+    ! (not)
+    && (and)
+    || (or)
+
+-Not(!) operator will reverse a boolean value
+     ex. console.log(!true) => false
+
+-And(&&) takes two boolean values + will only evaluate to true if both inputs are true, otherwise return false.
+    ex. console.log(true && false) => false
+
+-Or(||) takes two boolean  values + wil only evaluate to false when both inputs are false, otherwise returns true.
+    ex. console.log(false || true) => true
+
+
+--Order of Opertations
+    Javascript evaluates !, then &&, then ||
+
+--DeMorgan's Law
+    !(A || B) === !A && !B
+    !(A && B) === !A || !B
+    * used to distribute ! against parentheses *

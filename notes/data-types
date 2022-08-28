@@ -1,0 +1,85 @@
+
+
+--VARIABLES--
+   > Containers that hold information, purpose is to label and store data in the computer's memory
+
+--Initilization (Declaration & Assignment)--
+   > Once initilizing a variable, that variable will furthermore evaluate to the value assigned
+         ex. let bootcamp = "App Academy"
+            console.log(bootcamp) => prints "App Academy"
+
+   > "let" and "=" used to assign values to variables
+
+~Javascript variable names can contain any alphanumeric character; "_" or "$", HOWEVER, cannot begin w/ a number~
+
+--Manipulating Variables--
+> Using basic operands will not reassign the value of a variable. Must use shorthand operations.
+
+*Shorthand Variable Operands*
+
++= ... adds to a number and reassigns value
+-= ... subtracts from a number and reassigns value
+/= ... divides number and reassigns value
+*= ... multiplies number and reassigns value
+
+(++) and (--) add or subtract a number by exactly 1
+
+
+--DATA TYPES--
+
+--String
+>represents textual data, must be encapsulated by '' or ""
+  ex. "hello!"  "hello world"
+
+  *Important String Methods*
+   .charAt()- returns character at specified offset
+   .concat()- appends a string to another, returns new string
+   .indexOf()- returns index at the first occurance of specified substring
+   .lastIndexOf()- returns index at the last occurance of specified substring
+   .match()- retrieves result of matching a string against a regular expression
+   .replace()- searches a string for a value, returns new string w/ values replaced
+   .slice()- extracts part of a string, returns in new string, not changing original
+   .includes()- returns true if a string contains specified value, false if not found (also Array method)
+   .split()- splits a string into an array of substrings, does not change orginal string
+   .endsWith()- determines whether a string ends w/ specified characters, returning 'true' or 'false'
+
+--Number
+> an integer or floating number point- can also be +Infinity, -Infinity
+  ex. 3, 3.5, 3e-2
+
+--Boolean
+>represents logical entities, true or false, like a yes/no switch
+
+--Object
+>complex data type that allows for storing of collections of data.  Array is technically considered a special type of object.
+
+--Arrays
+>an ordered list, each item in an array is called an element, index starts at 0
+>arrays can hold any data type
+>can be indexed using []
+
+ *Important Array Methods*
+   .push()- adds one or more elements to the end of an array and returns new length
+   .pop()- removes last element from array, returns that element changing length of array
+   .shift()- removes first element from an array, returns removed element changing length
+   .unshift()- adds one or more elements to the beginning of an array and returns new length
+   .splice()- add or remove elements from an array, changes array
+   .slice()- copies part of an array and returns that copied part as new array, not modifiying original array
+   .join()- returns an array as a string, does not change original array
+   Array.isArray()- determines whether passed in value is an array 
+
+--NaN
+> A nonsensical arithmetic will result in NaN
+  ex. let num;
+       console.log(num + 3) = NaN
+
+--Null
+> represents intentional absence of any object value, not same as undefined
+
+--Undefined
+>represents a value that is not assigned.  If a variable is declared but the value is not assigned, that value will = undefined.
+
+--typeof (operator)
+>to find out the type of a variable, 'typeof' operator may be used
+   ex. let name= "Athena"
+       typeof(name) => "string"
