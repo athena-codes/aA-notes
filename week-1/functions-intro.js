@@ -28,16 +28,21 @@
 // //--Function that will return true or false if a number is prime;
 
 // function isPrime(number) {
+//     if (number < 2) {
+//         return false
+//     }
 
-//     for (let i = 2; i < number; i++) { // i= 2 bc prime num onlt divisbnle by 1
-//         // and itself
-//         if (number % i === 0) { // if number % 2 is 0, its not prime num
-//             return false   // so return false
+//     for (let i = 2; i < number; i++) {
+//         if (number % i === 0) {
+//             return false
+
 //         }
 //     }
 //     return true
 // }
+
 // console.log(isPrime(7))
+
 
 
 // /*--Function that will print every number in sequence from low to

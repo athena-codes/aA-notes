@@ -11,6 +11,7 @@
 // console.log(sumArray([1,  5, 10]))
 
 
+
 // //--Function that returns TWO arrays as ONE whole array;
 
 // function combineArray(array1, array2) {
@@ -18,6 +19,7 @@
 //     return newArray
 // }
 // console.log(combineArray([1, 2, 3], [4, 5, 6]))
+
 
 
 // //--Function that DOUBLES all numbers in an array;
@@ -36,6 +38,7 @@
 // console.log(doubler([2, 4, 6, 8]))
 
 
+
 // //--Function to find range of numbers min-max inclusive & return as array;
 
 // function range(min, max) {
@@ -46,6 +49,7 @@
 //     return num
 // }
 // console.log(range(1, 10))
+
 
 
 // //--Function to print all factors of a number and return in array;
@@ -63,6 +67,7 @@
 //     return factors   // return new array
 // }
 // console.log(factorsOf(10))
+
 
 
 // //--Function that finds smallest value in array and returns that number;

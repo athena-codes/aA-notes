@@ -1,4 +1,5 @@
 // //--Function to find sum of all numbers in a 2D array;
+
 // let twoDimensionalSum = function (arr) {
 //     let sum = 0
 
@@ -19,6 +20,7 @@
 //     [2]
 // ];
 // console.log(twoDimensionalSum(arr1))
+
 
 
 // //--Function to find product of all numbers in 2D array

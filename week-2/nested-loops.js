@@ -11,7 +11,7 @@
 //  }
 
 
-// //--Function to determine largest value in 2D array matrix (matrix= same amount of values in every array, perfect grid);
+// //--Function to determine largest value in 2D array matrix (matrix = same amount of values in every array, perfect grid);
 
 // function maxInMatrix(matrix) {
 //     let largestVal = 0
@@ -31,6 +31,7 @@
 //           [20, 19, 10],
 //           [47, 72, 56]]
 // console.log(maxInMatrix(matrix))
+
 
 // //--Function to determine maximum value in each column of a 2D array;
 // function maxColumn(matrix) {
