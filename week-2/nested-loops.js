@@ -60,3 +60,4 @@
 // [12, 14, 15]]
 
 // console.log(maxColumn(matrix))
+ 
