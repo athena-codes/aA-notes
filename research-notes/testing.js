@@ -43,3 +43,14 @@
 let reverse3 = str => str.split("").reverse().join("");
 
 console.log(reverse3("Athena"))
+
+
+function example(arg) {
+    var longEnough = false;
+    if (arg.length >= 5) {
+        var longEnough = true;
+    }
+    return longEnough;
+}
+
+console.log(example("testtesttest"));
