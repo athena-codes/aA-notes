@@ -3,18 +3,18 @@
 
 // let array = [1, 2, 3, 4, 5]
 
-// function printArray(arr, i = 0) {
+function printArray(arr, i = 0) {
 
-//     // Base Case: index has reached the end of the array
-//     if (i >= arr.length) return;
+    // Base Case: index has reached the end of the array
+    if (i >= arr.length) return;
 
-//     // Print the value
-//     console.log(arr[i]);
+    // Print the value
+    console.log(arr[i]);
 
-//     // Call the function recursively,
-//     // moving the index one step closer to the base case.
-//     printArray(arr, i + 1);
-// }
+    // Call the function recursively,
+    // moving the index one step closer to the base case.
+    printArray(arr, i + 1);
+}
 // console.log(printArray(array))
 
 
