@@ -65,23 +65,23 @@ function printArray(arr, i = 0) {
 
 // Merge sort
 
-// let array = [4, 1, 3, 2, 0, 1, 7, 10, 9, 20]
+let array = [4, 1, 3, 2, 0, 1, 7, 10, 9, 20]
 
-// function merge(arr, i = 0) {
+function merge(arr, i = 0) {
 
-//     if (arr.length === i) {
-//         return arr
+    if (arr.length === i) {
+        return arr
 
-//     } if (arr[i + 1] < arr[i]) {
-//         let x = arr[i + 1]
-//         arr[i + 1] = arr[i]
-//         arr[i] = x
-//     }
-//      return merge(arr, i + 1)
-//  }
+    } if (arr[i + 1] < arr[i]) {
+        let x = arr[i + 1]
+        arr[i + 1] = arr[i]
+        arr[i] = x
+    }
+     return merge(arr, i + 1)
+ }
 
 
-// console.log(merge(array))
+console.log(merge(array))
 
 
 // Sum all numbers of an integer
