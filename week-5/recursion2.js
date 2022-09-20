@@ -96,3 +96,17 @@ function sum(num) {
 
 console.log(sum(10))  // => 55
 console.log(sum(5))  // => 15
+
+
+
+// let i = 0
+// if (strings.length === 0) {
+//     return sorted
+
+// } if (strings[i + 1] < strings[i]) {
+//     let x = strings[i + 1]
+//     strings[i + 1] = strings[i]
+//     strings[i] = x
+//     sorted.push(x)
+// }
+// return shortestToLongest(sorted, i + 1)

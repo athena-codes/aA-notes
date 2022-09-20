@@ -1,0 +1,11 @@
+
+
+- What is a thread?
+
+> Thread of execution refers to a sequence of commands
+
+> Single vs Multi Threaded:
+  - in single thread only one command can be processed at a time
+ -  in multi thread multiple commands can be processed at a time
+
+> JS is a single threaded language, can only execute ONE command at a time

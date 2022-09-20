@@ -1,0 +1,12 @@
+
+-The Event Loop:
+   > the model of execution that JS uses
+   > consists of call stack and message queue
+   > call stacks is used to track in progress tasks, queue stores messages that cant be
+   > executed b/c stack is busy, once it's free messages will be executed
+
+
+-The Message Queue:
+   > items stored on the message queue are called "messages"
+   > when a new event occurs, but runtime is busy processing another command, a msg for that event is enqueued
+   > when runttime finishes its current command, nxt msq is dequeued and processed
