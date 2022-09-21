@@ -3,7 +3,7 @@
 
 // setTimeout(function () {
 //     console.log("time is up!");
-// }, 1500);     // function executes after 1.5 seconds
+// }, 1500);                      // function executes after 1.5 seconds
 
 
 // console.log("start");
@@ -49,25 +49,30 @@
 
 // Prints:
 //pancakes for breakfast  then,
-//couscous for lunch
-// after abt 2s
-
-
-function foo() {
-    console.log("food");
-}
-
-const val = setTimeout(foo, 2000);
-console.log(val);   // returns special timeout object or timeout id in console
-
+//couscous for lunch// after abt 2s
 
 
 // function foo() {
 //     console.log("food");
 // }
 
-// const val2 = setTimeout(foo, 2000);
-// clearTimeout(val);
+// const val = setTimeout(foo, 2000);
+// console.log(val);   // returns special timeout object or timeout id in console
+
+
+function foo(a, b) {
+    console.log("time is up!")
+    console.log(`${a} ${b}`)
+}
+
+const res = setTimeout(foo, 1000, 'potato', 'tomato')
+clearTimeout(res)
+
+
+
+
+
+
 
 
 
