@@ -14,7 +14,7 @@
 
 
 
-// ReFactored Version ^
+// ReFactored Version 
 
 let count = 0
 const interval = setInterval(function () {

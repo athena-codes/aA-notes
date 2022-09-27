@@ -22,8 +22,9 @@ function handleResponseTwo(secondAnswer) {
 function handleResponseThree(thirdAnswer) {
     console.log(thirdAnswer + " is left.");
     rl.close();
+    console.log('Thanks for your input!')
 }
 
-setTimeout(function() {
-    console.log("Thanks for your input!")
-}, 8000)
+// setTimeout(function() {
+//     console.log("Thanks for your input!")
+// }, 8000)
