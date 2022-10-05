@@ -1,6 +1,19 @@
-const sum = (...nums) => {
-    nums.reduce((acc, num) => acc + num);
+class User {
+    constructor(name) {
+        this.name = name;
+    }
+
+    changeName(newName) {
+        this.name = newName;
+        this.speak();
+    }
+
+    speak() {
+        console.log(this.name);
+    }
+
 }
 
-console.log(sum(1, 2, 3));
-
+const user = new User("Brady");
+changeName = user.changeName;
+changeName("Brian");
