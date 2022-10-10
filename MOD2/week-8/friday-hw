@@ -1,0 +1,13 @@
+const { suppressDeprecationWarnings } = require("moment");
+
+class Error {
+    constructor() {
+
+    }
+}
+
+class ErrorClass extends Error {
+    constructor() {
+        super()
+    }
+}
