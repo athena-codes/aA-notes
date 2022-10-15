@@ -1,0 +1,58 @@
+pop():
+time O(1) - space O(1)
+removing an element of the end, we dont have to iterate because the array keeps the arrays length as meta data.
+
+push():
+time O(1) - space O(1)
+Because dynamic arrays are over-allocated with additional memory spaces, adding something to the end of the array fills a slot in memory that was already allocated.
+worst case scenario, the array has to resize, which would make the push an O(n) time and space. But because it happens so infrequently, we consider push an O(1)
+
+shift():
+time O(n) - space O(1)
+it is O(n) because when we remove an element from the front of the array, all of the other elements have to shift to the left.
+
+unshift():
+time O(n) - space O(1)
+it is O(n) because when we add to the front of an array, all of the elements must first move to the right one space.
+
+indexOf():
+time O(n) - space O(1)
+because it must iterate through each element to find the element you are searching for.
+
+reverse():
+time O(n) - space O(1)
+O(n) for time complexity since it requires you to copy each element in the array, and changes their indexes
+[...arr]:
+
+time O(n) - space O(n)
+O(n) for time because it has to copy each element in the original array into the new array
+O(n) for space because its copying each element from the original array into a new array.
+
+reduce():
+time O(n) - space O(1) or O(n) (depending on your accumulator)
+Time is 0(n) because it must iterate through the given array
+Space O(1) when the accumulator is an integer.
+space O(n) when the accumulator is an array or pojo.
+
+filter():
+time O(n) - space O(n)
+time because it iterates through the given array
+space because it creates a new array with all of the true values.
+
+map():
+time O(n) - space O(n)
+time because it iterates through the given array
+space because it creates a new array with all of the new values.
+
+forEach():
+time O(n) - space O(1)
+time because it iterates through the given array
+
+slice():
+time O(n) - space O(n)
+it has to iterate through the given indices
+it creates a new array to copy the selected elements
+
+splice()
+time O(n) - space O(n)
+It has to iterate through the given index and amount
