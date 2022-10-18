@@ -10,11 +10,17 @@
 class Stack {
   constructor(data = []) {
     this.data = data
+    this.length = 0
   }
   push(newFrame) {
     this.data.push(newFrame)
+    this.length++
   }
   pop() {
+    if(!this.data){
+        return
+    }
+    this.length--
     return this.data.pop()
   }
   peek() {
@@ -26,6 +32,10 @@ class Stack {
       dataStr += this.data[i] + ' '
     }
     return dataStr
+//  this.data.forEach((element) => {
+//     console.log(element)
+//   })
+//  }
   }
 }
 
