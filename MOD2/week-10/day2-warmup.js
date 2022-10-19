@@ -32,10 +32,6 @@ class Stack {
       dataStr += this.data[i] + ' '
     }
     return dataStr
-//  this.data.forEach((element) => {
-//     console.log(element)
-//   })
-//  }
   }
 }
 
