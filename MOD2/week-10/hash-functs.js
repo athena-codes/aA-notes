@@ -1,3 +1,5 @@
+// --Hashing
+
 function simpleHash (str) {
   let hashValue = 0
 
@@ -45,4 +47,17 @@ class KeyValuePair {
     this.value = value
   }
 }
+
+// -- Simple hashing algo (not optimal for security)
+
+const hashIt = (word) => {
+  return word
+  .split('')
+  .reduce((res,char) => {
+    console.log("res ", res)
+    return Number(char.charCodeAt().toString(2)) + res
+  }, 0)
+}
+
+console.log(hashIt("Athena")) // => 6512313
 
