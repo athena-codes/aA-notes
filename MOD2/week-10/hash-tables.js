@@ -1,4 +1,4 @@
-// Makeing a has table class
+// Making a hash table class
 
 class HashTable {
   constructor () {
