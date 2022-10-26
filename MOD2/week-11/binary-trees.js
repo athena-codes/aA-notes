@@ -186,3 +186,29 @@ let arr = [0, 1, 2, 3, 4, 5];
 [arr[1], arr[3]] = [arr[3], arr[1]];
 
 console.log(arr)
+
+
+
+    // Breadth First Traversal - Iterative
+  const breadthFirstTraversal = () => {
+
+     if (!this.root) {
+      return
+     }
+
+    let queue = []
+    queue.push(this.root)  // put starting node in queue
+
+    while (queue.length > 0) {   // while queue is not empty
+        let current = queue.shift() // dequeue a node
+        console.log(current.val)   // print that node
+
+        if (current.left) {  // search left printing values
+          queue.push(current.left)
+        }
+        if (current.right) {  // then search left printing values
+          queue.push(current.right)
+        }
+    }
+    return queue  // return queue that has all values printed in breadth first order
+}
