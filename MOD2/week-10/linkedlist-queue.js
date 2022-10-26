@@ -61,3 +61,7 @@ console.log(llq)
 llq.dequeue() // removes first ele
 console.log(llq)
 console.log(llq.peek()) // => 2 is now first ele
+
+
+
+
