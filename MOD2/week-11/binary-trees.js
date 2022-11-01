@@ -82,7 +82,6 @@ function binaryTreeSum(root) {
 
 // Breadth-first Traversal: (queue each node and its children then dequeue + print and repeat process)
 
-
 class Queue {
   constructor () {
     this.head = null
