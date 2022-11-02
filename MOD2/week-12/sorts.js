@@ -36,3 +36,8 @@ console.log(sortedNums)  // Output => [1, 4, 15, 0, 0]
 
 let arr = [3, 64, 12, 840, 93, 75]
 console.log(arr.sort())  // Output => [12, 3, 64, 75, 840, 93]
+
+
+let arr2 = [1, 1, 6, 4, 5, 6, 8, 2]
+let set = new Set(arr2)
+console.log(set)
