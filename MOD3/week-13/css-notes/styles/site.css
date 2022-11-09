@@ -1,0 +1,59 @@
+/* A CSS Rule that removes padding and margin from the document  */
+/*---------------------------------------------------------------*/
+/* The selectors are "html" and "body".                          */
+/* The properties are "padding" and "margin", each with value 0. */
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+/* Type selector */
+div {
+  background-color: #000000;
+}
+
+/* Class selector */
+.active {
+  color: #ffffff;
+}
+
+/* ID selector */
+#list-1 {
+  border: 1px solid gray;
+}
+
+/* Universal selector */
+* {
+  padding: 10px;
+}
+
+/* Attribute selector */
+a[title] {
+  font-size: 2em;
+}
+
+/* Class selector = class name preceded by a period */
+.boxy {
+  border-radius: 4px;
+  box-shadow: 0 2px gray; /* offset-x | offset-y | color */
+  filter: blur(2px);
+  background-color: #000000;
+  opacity: 0.2; /* 100% = 1 */
+}
+
+/* Combine selectors to apply same style to multiple elements */
+h1,
+h2 {
+  font-style: italic;
+}
+
+/* Combine tag selectors w/ ID/class slectors to only style specific parts of an element/s */
+h1#heading,
+h2.subheading {
+  font-style: italic;
+}
+
+/* Descendant Selector- styles all elements named ___ contained in ___ */
+div abbr {
+  text-transform: uppercase;
+}
