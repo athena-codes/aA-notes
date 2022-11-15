@@ -1,0 +1,38 @@
+body {
+    color: red
+}
+.title {
+    font-size: 6rem;
+}
+
+.subtitle {
+    font-size: 4rem;
+}
+/* turns red above 500px, all is default */
+@media all and (max-width: 500px) {
+    body {
+     color: blue;
+    }
+}
+/* blue when printed out */
+@media print {
+    body {
+     color: blue;
+    }
+}
+
+/* any selectors that come after a media query will
+take precedence; for ex. if body was moves to bottom,
+text would never change to blue */
+/* and is "and" and or is "," */
+ @media (orientation: landscape) and (max-width: 500px) {
+    .title {
+        color: green;
+    }
+ }
+
+ @media (orientation: portrait) {
+    .subtitle {
+        color: cyan;
+    }
+ }
