@@ -1,9 +1,24 @@
+body {
+    background-color: black;
+    color: white;
+}
 .container {
   display: flex;
-  flex-flow: row wrap;  /* Set flex-direction first, followed by flex-wrap. */
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;/* Set flex-direction first, followed by flex-wrap. */
 }/* OR row-reverse OR column OR column-reverse */
 
-
+.boxes {
+ display: none;
+ position: absolute;
+ cursor: pointer;
+}
+.container:hover .boxes {
+    display: flex;
+    flex-direction: column;
+}
 .box-1 {
     box-sizing: border-box;
     height: 25px;
