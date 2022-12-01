@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="main.js"></script>
+  <title>#{username}'s Profile Page</title>
+</head>
+<body>
+  <h1>Welcome to #{username}'s profile page!</h1>
+  <p>#{biography}</p>
+  <h2>Comment Box</h2>
+  <form method="post" action="/comment">
+    <p>To send a comment to #{username}, fill out this form</p>
+    <textarea name="commentBody"></textarea>
+    <button type="submit">Comment</button>
+  </form>
+</body>
+</html>
