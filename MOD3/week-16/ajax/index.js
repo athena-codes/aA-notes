@@ -1,3 +1,5 @@
+// USING XHR - XML/HTTP request object
+
 function showCountries() {
     let xhr = new XMLHttpRequest()
 
