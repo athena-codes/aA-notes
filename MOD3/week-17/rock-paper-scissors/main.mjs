@@ -5,4 +5,18 @@
 // }
 
 
-window.addEventListener('DOMContentLoaded')
+// Better way to run program when DOM is loaded
+
+window.addEventListener('DOMContentLoaded', async () => {
+    // console.log('Window is loaded')
+
+
+
+
+
+
+
+
+
+
+})
