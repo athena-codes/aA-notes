@@ -3,28 +3,29 @@
 // Event Listeners
 
 // alert when button is clicked in browser
-// const buttonTwo = document.querySelector('.btn-2')
+const buttonTwo = document.querySelector('.btn-2')
 
-// function alertBtn() {
-//     alert("I also love Javascript!")
-// }
+function alertBtn() {
+    alert("I also love Javascript!")
+}
 
-// buttonTwo.addEventListener("click", alertBtn)
+buttonTwo.addEventListener("click", alertBtn)
 
 
 // Mouse Over Event
 
-// const newBackgroundColor = document.querySelector('.box-3')
+const newBackgroundColor = document.querySelector('.box-3')
 
-// function changeBgColor() {
-//     newBackgroundColor.style.backgroundColor = 'purple'
-// }
+function changeBgColor() {
+    newBackgroundColor.style.backgroundColor = 'purple'
+}
 
-// newBackgroundColor.addEventListener('mouseover', changeBgColor)
+newBackgroundColor.addEventListener('mouseover', changeBgColor)
 
 
 const revealBtn = document.querySelector(".reveal-btn")
-const hiddenContent = docmument.querySelector('.hidden-content')
+const hiddenContent = document.querySelector(".hidden-content")
+console.log(hiddenContent)
 
 function revealContent() {
     if (hiddenContent.classList.contains('reveal-btn')) {
