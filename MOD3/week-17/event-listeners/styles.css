@@ -1,0 +1,34 @@
+#main-heading {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.boxes {
+    border: 2px dotted rgb(81, 86, 158);
+    background-color: rgb(155, 155, 217);
+    border-radius: 2px;
+}
+
+#heading {
+    padding: 20px;
+    font-size: 20px;
+}
+
+button {
+   margin-left: 40px;
+   padding-bottom: 5px;
+   background-color: rgb(237, 230, 243);
+   border: 1px dotted black;
+}
+
+button:hover {
+   background-color: rgb(191, 184, 184);
+   cursor: pointer;
+}
