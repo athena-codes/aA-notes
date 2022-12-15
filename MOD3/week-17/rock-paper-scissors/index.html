@@ -5,29 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Rock Paper Scissors</title>
 </head>
 
 <body id='body'>
     <div>
-        <div id="'header-main">
+        <div id="header-main">
             <!-- Header elements (players, score) -->
             <h2 id="player-name"></h2>
             <h2 id="player-score"></h2>
-            <h2 id="'cpu-score"></h2>
+            <div id ='seperation-div'></div>
+            <h2 id="cpu-score"></h2>
             <h2 id="cpu-name"></h2>
         </div>
         <div>
+            <div id="image-div">
             <!-- Rock, Paper, Scissor Images -->
-            <img>
-            <img>
-            <img>
+            <img id = "rock" class="pictures" src='/images/rock.jpeg'>
+            <img id="paper" class="pictures" src='/images/paper.webp'>
+            <img id ='scissors' class="pictures" src ='/images/scissors.jpeg'>
+        </div>
         </div>
     </div>
-    <div>
+    <div class='buttons'>
         <!-- New game + Reset Buttons -->
-        <button></button>
-        <button></button>
+        <button id="newgame-button" class="button">New Game</button>
+        <button id="reset-button" class="button">Reset</button>
     </div>
     <!-- Script tags -->
     <script type="text/javascript" src="main.mjs""></script>

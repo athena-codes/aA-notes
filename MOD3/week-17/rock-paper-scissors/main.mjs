@@ -7,34 +7,39 @@
 
 // Better way to run program when DOM is loaded
 
-window.addEventListener('DOMContentLoaded', async () => {
-      // console.log('Window is loaded')
-    let body = document.getElementById('body')
+window.addEventListener("DOMContentLoaded",async ()=>{
 
-    // inline javascript styling -> adds to HTML in DOM
-    body.style.backgroundColor = 'white'
+    let body = document.getElementById("body")
 
-    // returns HTML collection
-    let h2sHTML = document.getElementsByTagName('h2')
-    let h2sNode = document.querySelectorAll('.header')
-    console.log(h2sHTML)
-    console.log(h2sNode)
+    body.style.backgroundColor = "whitesmoke"
 
-    // console.log(h2sNode.forEach((ele) => {
-    //     // console.log(ele)
-    // }))
-    let playerName = document.getElementById('player-name')
-    playerName.innerHTML = '<p> Player </p>'
+    // let h2sHTML = document.getElementsByTagName("h2")
+    // let h2sNode = document.querySelectorAll(".header")
+    // // console.log(h2sNode)
+    // // console.log(h2sHTML)
+    //     h2sNode.forEach(ele =>{
+    //     ele.innerText = "im a header"
 
-    let playerScore = document.getElementById('player-score')
+    // })
+    let playerName = document.getElementById("player-name")
+    let playerScore = document.getElementById("player-score")
+    let cpuScore = document.getElementById("cpu-score")
+    let cpuName = document.getElementById("cpu-name")
+    let sepDiv = document.getElementById("seperation-div")
+    sepDiv.style.backgroundColor = "black"
+    playerName.innerHTML = "<p> Player </p>"
     playerScore.innerText = 0
-
-    let cpuName = document.getElementById('cpu-name')
-    cpuName.innerText = 'CPU'
-
-    let cpuScore = document.getElementById('cpur-score')
     cpuScore.innerText = 0
-
-
-
+    cpuName.innerText = "CPU"
+    let newGame = document.getElementsById('newgame-button')
+    let reset = document.getElementById('reset-button')
+    newGame.innerText = "New Game"
+    reset.innerText = "Reset"
+    let img = documewnt.getElementById("rock")
+    // can also do:
+    img.setAttribute("src", "./images/rock.jpeg")
+    let divMain = document.getElementById("main")
+    let child = document.createElement('div')
+    console.log(divMain.children)
+    divMain.appendChild(child)
   })
