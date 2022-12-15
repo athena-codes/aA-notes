@@ -10,7 +10,7 @@
 </head>
 
 <body id='body'>
-    <div>
+    <div id='main'>
         <div id="header-main">
             <!-- Header elements (players, score) -->
             <h2 id="player-name"></h2>
@@ -19,20 +19,19 @@
             <h2 id="cpu-score"></h2>
             <h2 id="cpu-name"></h2>
         </div>
-        <div>
-            <div id="image-div">
+        <div id="image-div">
             <!-- Rock, Paper, Scissor Images -->
             <img id = "rock" class="pictures" src='/images/rock.jpeg'>
             <img id="paper" class="pictures" src='/images/paper.webp'>
             <img id ='scissors' class="pictures" src ='/images/scissors.jpeg'>
         </div>
-        </div>
     </div>
-    <div class='buttons'>
+    <div id='button-div'>
         <!-- New game + Reset Buttons -->
         <button id="newgame-button" class="button">New Game</button>
         <button id="reset-button" class="button">Reset</button>
     </div>
+</div>
     <!-- Script tags -->
     <script type="text/javascript" src="main.mjs""></script>
 </body>

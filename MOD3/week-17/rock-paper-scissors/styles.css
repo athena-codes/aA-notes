@@ -26,11 +26,13 @@
     width: 200px;
 }
 
-.buttons {
+#button-div {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    margin-top: 10%;
 }
 
 .button {
@@ -40,9 +42,9 @@
     padding: 20px 32px;
     font-size: 15px;
     font-weight: 600;
-    line-height: 14px;
-    border: none;
-    border-radius: 5px;
+    line-height: 5px;
+    border: 2px solid black;
+    border-radius: 2px;
     letter-spacing: 1px;
     cursor: pointer;
     text-transform: uppercase;
