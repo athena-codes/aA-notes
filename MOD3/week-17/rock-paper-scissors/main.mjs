@@ -35,7 +35,7 @@ window.addEventListener("DOMContentLoaded",async ()=>{
     cpuName.innerText = "CPU"
 
     let sepDiv = document.getElementById("seperation-div")
-    sepDiv.style.backgroundColor = "black"
+    sepDiv.style.backgroundColor = "black"!
 
     let newGame = document.getElementById('newgame-button')
     newGame.innerText = "New Game"
