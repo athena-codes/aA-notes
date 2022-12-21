@@ -49,3 +49,21 @@
     cursor: pointer;
     text-transform: uppercase;
 }
+
+.hidden {
+display: none;
+}
+
+.chosen {
+    position: absolute;
+    top: 130px;
+    border: solid black;
+    height: 100px;
+    width: 100px;
+}
+
+.chosen-img {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
