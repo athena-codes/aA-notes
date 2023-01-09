@@ -1,1 +1,1 @@
-const obj = {"message": "yes we can!"}
+const obj = { "message": "yes we can!" }
