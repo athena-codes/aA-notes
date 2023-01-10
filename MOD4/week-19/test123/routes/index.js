@@ -1,76 +1,47 @@
 var express = require('express');
 var router = express.Router();
+const app = express()
 
 /* GET home page. */
 // router.get('/', function(req, res, next) {
 //   res.render('index', { title: 'Express' });
 // });
 
-// In the code above, assume that all the middleware are defined
-// and connected in order from 1-4.
-// Will middleware 3 be invoked for a request to GET /hello?
-// middleware below are listed in order
+// QUESTION 1: -> GET /green worked
+// router.get('/:name', (req, res) => { console.log('This works!') });
 
+// app.use('/colors', router);
+
+// QUESTION 2 -> NO it is not invoked due to errors
+// middleware below are listed in order
 // 1:
-// app.get('/', (req, res, next) => {
-//   console.log("1 invoked")
+// app.use((err, req, res, next) => {
 //   next(err)
 // })
 
 // // 2:
-// app.use((err, req, res, next) => {
-//   console.log('2 invoked')
-//   next(err)
-// })
-
-// // 3:
-// app.use((err, req, res, next) => {
-//   console.log('3 invoked')
-//   return res.json()
-// })
-
-// // 4:
-// app.use((req, res, next) => {
-//   console.log('4 invoked')
+// app.post('/colors', (req, res, next) => {
+//   res.json({
+//     word: "true"
+//   })
 //   next()
 // })
 
-// Which route handler will be invoked for a POST /hello
-// request if all the route handlers are defined in order
-//from 1-4?
-// route handlers below are listed in order
-// 1:
-app.post('/world', (req, res) => {
-  res.status(200).json({
-  body: req.body
+// // 3:
+// app.use((req, res, next) => {
+//   next()
+// })
+
+// // 4:
+// app.use((err, req, res, next) => {
+//   console.log('This works!')
+//   return res.json()
+// })
+
+// QUESTION 3
+app.get('/', (req, res) => {
+  res.json('Hello World')
 })
-  console.log('1 invoked')
- });
-
-// 2:
-app.post('/:word', (req, res) => {
-  console.log('4 invoked')
-res.status(200).json({
-    word: req.params.word })
- });
-
-// 3:
-app.post('/hello', (req, res) => {
-  res.status(200).json({
-    body: req.body
-  });
-  console.log('3 invoked')
-})
-
-// 4:
-app.post('/:word', (req, res) => {
-  console.log('4 invoked')
-  res.status(200).json({
-  word: req.params.word
-})
-
- });
-
 
 
 
