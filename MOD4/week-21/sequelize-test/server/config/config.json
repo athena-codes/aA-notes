@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
+    "username": "athenarose",
+    "password": "1234",
+    "database": "custom_auth_tutorial",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
