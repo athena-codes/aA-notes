@@ -1,0 +1,21 @@
+ ** REDUX INTRO NOTES **
+
+ -- Store global info in a more organized manner than React Context,
+ useful for large scale apps.
+
+ USEFUL REDUX COMPONENTS: 
+
+ -- Store
+  - redux stores state in a single store
+
+-- Actions
+  - how we update stores/state
+  - dispatched with an object to update
+  - reducer is invoked with said action
+
+-- Thunks
+  - thunk is where fetches to API are made
+  - thunk is used to make API call, dispatch is invoked
+    with the action and the reducer invokes the action
+  - update state based on what was tossed into the reducer function
+  - async fetch -> dispatch action -> data sent to reducer to update state
