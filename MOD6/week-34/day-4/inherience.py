@@ -27,16 +27,6 @@ class Manager(Employee):
         self.employees.append(employee)
 
 
-In object-oriented programming, inheritance is used to create stable, reliable, and reusable code by basing a new class on an existing class .
-A child class inherits all of the attributes and behavior of the parent class , and can override any undesirable attributes or behavior of the parent class, as well as add new attributes or behavior.
-The parent class is also called a superclass and the child class is also called a subclass.
-The child class inherits all attributes and behavior from the parent class , but any attributes that are defined in the child class are not available to the parent class.
-To inherit one class from another in Python, you specify the parent class in parentheses after the child class ' name.
-In Python, the super() function is used to call the parent class methods.
-Here is an example of a Employee class and a Manager subclass inheriting from Employee:
-python
-Copy code
-
 
 class Employee:
     def __init__(self, id):
@@ -50,31 +40,6 @@ class Manager(Employee):
 
     def add_direct_report(self, employee):
         self.employees.append(employee)
-
-
-In this example, objects from Employee have an id instance variable, while objects from Manager have an id instance variable(inherited from Employee) and an employees instance variable that contains the employee objects that the manager manages.
-Here is the equivalent code in JavaScript:
-kotlin
-Copy code
-
-
-class Employee {
-    constructor(id) {
-        this.id = id
-    }
-}
-
-
-class Manager extends Employee {
-    constructor(id) {
-        super(id)
-        this.employees = []
-    }
-
-    add_direct_report(employee) {
-        this.employees.push(employee)
-    }
-}
 
 
 # -- The syntax for calling the initializer of the parent class in Python is
