@@ -29,4 +29,9 @@ say_hello()
 # After function is called.
 
 # --> as we can see here, the decorator was applied to the say_hello function,
-# so that the print messages will happen before + after funct is called 
+# so that the print messages will happen before + after funct is called
+
+# SYNTACTIC SUGAR:
+# Decorators are a kind of syntactic sugar, which means that they provide a more convenient
+# way of writing code. Instead of writing a function call and passing the result to another
+# function, you can use a decorator to modify the behavior of a function directly.
