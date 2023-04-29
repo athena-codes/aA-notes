@@ -57,6 +57,37 @@ print('Bird 4', b4.x, b4.y)
 # you should put a leading underscore on them. Since the AngryBird class is in charge of its
 # x and y instance variables, that means the names of those variables should have a leading underscore.
 
+# All instance variables in a Python class object should be considered non public,
+# therefor prefaced by a '_'
 # EXAMPLE:
 # self._x = x
 # self._y = y
+
+
+# EXAMPLE USING __slots__:
+class AngryBird3:
+    __slots__ = ['_x', '_y']
+
+    def __init__(self, x=0, y=0):
+        """
+        Construct a new AngryBird by setting its position to (0, 0).
+        """
+        self._x = x
+        self._y = y
+
+    def move_up_by(self, delta):
+        self._y += delta
+
+    def get_x(self):
+        return self._x
+
+    def get_y(self):
+        return self._
+
+# Best practice to add __slots__ at the end, after making sure everything works as intended
+
+
+# Since python will print a runtime object when trying to view a class, you can add a __repr__ method
+#  to avoid this default behavior:
+#   def __repr__(self):
+#         return f"<AngryBird ({self._x}, {self._y})>"
