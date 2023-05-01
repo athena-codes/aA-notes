@@ -63,3 +63,7 @@ bird.x = 12
 bird.y = -20
 
 print(bird.x, bird.y)  # Output: 12 0
+
+
+#
+
