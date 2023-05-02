@@ -1,9 +1,10 @@
 ''' SQLITE 3
 * a built-in package is used to connect to SQLite3 in Python
+* sqlite3 is a built-in package in Python so there is no need to install it
 =============================================================
                     DB SCHEMA
 =============================================================
-                    
+
 CREATE TABLE owners (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   first_name VARCHAR(255) NOT NULL,
@@ -34,3 +35,36 @@ VALUES
 (1995, 'Mitsubishi', 'Eclipse', 2),
 (1994, 'Acura', 'Integra', 3);
 '''
+
+#  Connect to the databse:
+
+import sqlite3
+
+DB_FILE = "dev.db"
+
+with sqlite3.connect(DB_FILE) as conn:
+    print(conn)  # <sqlite3.Connection object at 0x102bddc60>
+
+# Run file w/ this cmd:
+#  pipenv run python sqlite3_demo.py
+#  -- creates Pipfile + virtual env
+
+# Create cursor:
+
+with sqlite3.connect(DB_FILE) as conn:
+    curs = conn.cursor()
+    curs.execute("SELECT 'Hello World!'")
+    result = curs.fetchone()
+    print(result)  # ('Hello World!',)
+
+# cursor objects are iterable
+# you can grab all of the results obtained by the cursor with fetchall()
+with sqlite3.connect(DB_FILE) as conn:
+    curs = conn.cursor()
+    curs.execute('SELECT manu_year, make, model FROM cars;')
+    cars = curs.fetchall()
+    for car in cars:
+        print(car)
+        # (1993, 'Mazda', 'Rx7')
+        # (1995, 'Mitsubishi', 'Eclipse')
+        # (1994, 'Acura', 'Integra')
