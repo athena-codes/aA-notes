@@ -49,6 +49,7 @@ with sqlite3.connect(DB_FILE) as conn:
 #  pipenv run python sqlite3_demo.py
 #  -- creates Pipfile + virtual env
 
+
 # Create cursor:
 
 with sqlite3.connect(DB_FILE) as conn:
@@ -57,14 +58,81 @@ with sqlite3.connect(DB_FILE) as conn:
     result = curs.fetchone()
     print(result)  # ('Hello World!',)
 
+
 # cursor objects are iterable
 # you can grab all of the results obtained by the cursor with fetchall()
-with sqlite3.connect(DB_FILE) as conn:
-    curs = conn.cursor()
-    curs.execute('SELECT manu_year, make, model FROM cars;')
-    cars = curs.fetchall()
-    for car in cars:
-        print(car)
+
+#  GET ALL CARS
+def print_all_cars():
+    #  The cursor will let you use parameterized SQL statements to execute your commands
+    with sqlite3.connect(DB_FILE) as conn:
+        curs = conn.cursor()
+        curs.execute('SELECT manu_year, make, model, owner_id FROM cars;')
+        cars = curs.fetchall()
+        for car in cars:
+            print(car)
+            print(car)
+            print(car)
+
+
+print_all_cars()
+# (1993, 'Mazda', 'Rx7', 1)
+# (1995, 'Mitsubishi', 'Eclipse', 2)
+# (1994, 'Acura', 'Integra', 3)
         # (1993, 'Mazda', 'Rx7')
         # (1995, 'Mitsubishi', 'Eclipse')
         # (1994, 'Acura', 'Integra')
+
+#   GET CAR OF SPECIFIC OWNER
+def get_owners_cars(owner_id):
+    """
+    Fetch and return all cars in the cars table
+    :param owner_id: <int> the id of the owner who's cars to return
+    :return: <list> the results of the query
+    """
+    with sqlite3.connect(DB_FILE) as conn:
+        curs = conn.cursor()
+        curs.execute("""
+                     SELECT manu_year, make, model FROM cars
+                     WHERE owner_id = :owner_id
+                     """,
+                     {'owner_id': owner_id})
+        results = curs.fetchall()
+        return results
+
+
+print(get_owners_cars(1))  # [(1993, 'Mazda', 'Rx7')]
+
+
+#   CREATE NEW CAR
+def add_new_car(manu_year, make, model, owner_id):
+    """
+    Add the given car to the database
+    :param manu_year: <int> the year the car was made
+    :param make: <string> the manufacturer of the car
+    :param model: <string> the model of the car
+    :param owner_id: <int> the id number of the owner
+    """
+    with sqlite3.connect(DB_FILE) as conn:
+        curs = conn.cursor()
+        # curs.execute(f'INSERT INTO {table}{columns} VALUES{values};')
+        curs.execute("""
+                     INSERT INTO cars (manu_year, make, model, owner_id)
+                     VALUES (:manu_year, :make, :model, :owner_id)
+                     """,
+                     {'manu_year': manu_year,
+                      'make': make,
+                      'model': model,
+                      'owner_id': owner_id})
+
+
+add_new_car(2000, 'Ford', 'Lightning', 2)
+
+add_new_car(1994, 'Toyota', 'Supra', 2)
+
+print_all_cars()
+# (1993, 'Mazda', 'Rx7', 1)
+# (1995, 'Mitsubishi', 'Eclipse', 2)
+# (1994, 'Acura', 'Integra', 3)
+# (2000, 'Ford', 'Lightning', 2)
+# (1994, 'Toyota', 'Supra', 2)
