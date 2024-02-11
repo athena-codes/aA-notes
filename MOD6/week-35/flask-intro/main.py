@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return '<h1>Hello, world!</h1>'
+    return '<h1>Hello world!</h1>'
 
 # Start application:
 # pipenv run flask run
